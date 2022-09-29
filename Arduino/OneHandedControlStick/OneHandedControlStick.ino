@@ -14,7 +14,7 @@ void setup() {
 
 //Runs repeatedly
 void loop() {
-  //Don't bother processing 
+  //Don't bother processing if not connected.
   if (XInput.connected()) {
     
     //TODO: Read input from PISO shift register
