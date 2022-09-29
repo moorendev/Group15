@@ -31,8 +31,8 @@ void HandleDPAD(uint8_t shiftRegisterInput) {
 
 //Get face button information from shift register input
 void HandleFaceButtons(uint8_t shiftRegisterInput) {
-  XInput.setButton(BUTTON_A, FACE_A_MASK);
-  XInput.setButton(BUTTON_B, FACE_B_MASK);
-  XInput.setButton(BUTTON_X, FACE_X_MASK);
-  XInput.setButton(BUTTON_Y, FACE_Y_MASK);
+  XInput.setButton(BUTTON_A, FACE_A_MASK^shiftRegisterInput);
+  XInput.setButton(BUTTON_B, FACE_B_MASK^shiftRegisterInput);
+  XInput.setButton(BUTTON_X, FACE_X_MASK^shiftRegisterInput);
+  XInput.setButton(BUTTON_Y, FACE_Y_MASK^shiftRegisterInput);
 }
